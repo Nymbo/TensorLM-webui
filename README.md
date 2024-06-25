@@ -4,13 +4,18 @@
 
 *This is Fooocus from the world of Stable Difusion in the world of Text Generation, the same ease of use and the same convenience.*
 
-This is simple and modern [Gradio](https://gradio.app) webui for LLM models GGML format (.bin) based on LLaMA.
+This is simple and modern [Gradio](https://gradio.app) webui for LLM models GGML format (.bin) or GGUF format (.gguf) based on LLaMA.
+
+We can try this app online in very slow demo of 3.0.0 version: <a target="_blank" href="https://huggingface.co/spaces/ehristoforu/TensorLM-webui-for-HF">
+  <img src="https://huggingface.co/datasets/huggingface/badges/raw/main/open-in-hf-spaces-md-dark.svg" alt="Open In Spaces"/>
+</a>
 
 ---
 Navigation: \
 [**Installing**](#installing) \
 [**Presets**](#presets) \
 [**Model downloading**](#model-downloading) \
+[**API**](#api) \
 [**Args**](#args)
 ---
 
@@ -26,6 +31,8 @@ You can use this webui in cloud service Colab: <a target="_blank" href="https://
 - Comfy to work
 - Not demanding on resources
 - Beautiful and pleasant interface
+- Support GGML and GGUF format (.bin and .gguf)
+- Support OpenAI API and MistralAI API
 
 ## Installing
 
@@ -39,6 +46,8 @@ Step-by-step installation:
   3. Run ```cd TensorLM-webui```
   4. Run ```update_mode.bat``` && enter 1 and 2
   5. Run ```start.bat```
+     
+Or download exe installer from [this repo](https://github.com/stableuser/TLM_Installer)
 
 ### In MacOS
 
@@ -68,6 +77,30 @@ You can create your custom presets, instruction in ```presets``` folder (it is .
 ## Model downloading
 
 With this interface you don't need to scour the Internet looking for a compatible model; in the "Tabs" checkbox and in the "ModelGet" tab you can choose which model to download from our verified repository on HuggingFace.
+
+## API 
+
+*Warning! Need Internet.*
+
+### OpenAI API
+
+![openai-api-preview](assets/openai-api-preview.png)
+
+You can use OpenAI API in this UI (select "OpenAI" in Mode radio-button).
+
+- You can select the OpenAI model or input your custom OpenAI model
+- You can select the OpenAI endpoint or input your custom OpenAI endpoint
+
+*To enter your OpenAI key go to ```configure.txt``` and input to ```openai_key``` parameter*
+
+### MistralAI API
+
+![mistralai-api-preview](assets/mistralai-api-preview.png)
+
+You can use MistralAI API (from HuggingFace) in this UI (select "MistralAI" in Mode radio-button) for free.
+
+- You can select the MistralAI model or input your custom MistralAI model
+
 
 ## Args
 
